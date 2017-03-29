@@ -1,4 +1,4 @@
-const countdown = (function() {
+const countdown = function() {
 
     let now = new Date()
     let eventDate = new Date(2018, 11, 21)
@@ -12,7 +12,7 @@ const countdown = (function() {
     return d
   }
   const getHours = function() {
-    let h = Math.floor(remTimee/ (1000 * 60 * 60))
+    let h = Math.floor(remTime/ (1000 * 60 * 60))
     h %= 24
     h = (h < 10) ? "0" + h : h
     return h
@@ -29,16 +29,19 @@ const countdown = (function() {
     s = (s < 10) ? "0" + s : s
     return s
   }
+  d = getDays()
+  h = getHours()
+  m = getMinutes()
+  s = getSeconds()
 
-  return { 
-    log: console.log("inside end of countdown.js"),
-    getDays: getDays,
-    getHours: getHours,
-    getMinutes: getMinutes,
-    getSeconds: getSeconds
-  }
+  document.getElementById('days').textContent = d
+  document.getElementById('hours').textContent = h
+  document.getElementById('minutes').textContent = m
+  document.getElementById('seconds').textContent = s
 
-})()
+  setTimeout(countdown, 1000)
 
-module.exports = countdown;
+}
+
+countdown()
 
