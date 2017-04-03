@@ -10,7 +10,7 @@
   <body>
       <div class="container-container">
 
-        <p>Countdown Timer</P>
+        <p class="flex-container">Countdown Timer</P>
         <div class="flex-container">
           <div class="flex-item">
             <div class="numbr" id="days">120</div>
@@ -29,8 +29,16 @@
             <div class="unit">Seconds</div>
           </div>
         </div><!--end class flex-container-->
+        <div class="flex-prompt-container">
+          <div id="dialog-container" class="prompt-items">
+              <div class="dialog-message">set countdown</div><!--end dialog-message-->
+              <input id="dialog-input" type="text" class="dialog-input" />
+              <a type="button" onclick="">set</a>
+          </div><!--end dialog-container-->
+        </div><!--end prompt-container-->
       </div><!--end class container-container-->
     <script src="./scripts/countdown.js"></script>
+    <script src="./scripts/custom-prompt.js"></script>
   </body>
 </html>
 

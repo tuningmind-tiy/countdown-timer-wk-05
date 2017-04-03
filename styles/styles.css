@@ -21,6 +21,19 @@ body {
 p {
   font-size: 4vw;
 }
+a {
+  padding: 1px 8px;
+  width: 65%;
+  color: #282828;
+  vertical-align: center;
+  text-align: center;
+}
+.dialog-input {
+  height: 15px;
+}
+.dialog-message {
+
+}
 .unit {
   font-size: 3vw;
 }
@@ -32,14 +45,13 @@ p {
   color: #909090;
   text-shadow: inset -2px -8px 4px #505050;
   box-shadow: inset -2px -4px 8px #666;
-
 }
 .container-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-around;
+  align-content: space-around;
   align-items: center;
   height: 70%;
   background: #ddd;
@@ -65,10 +77,31 @@ p {
   margin-top: 0;
 }
 .flex-item {
-  padding: 0.5vw;
+  padding: 0.5rem;
   flex-direction: column;
   display: flex;
-  font-size: 8vw;
+  font-size: 8rem;
+  width: 2em;
+  margin: 0;
+}
+.flex-prompt-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  height: 90%;
+  width: 30%;
+  padding-top: 0;
+  margin-top: 0;
+}
+input {
+  border-radius: 2px;
+}
+.prompt-items {
+  padding: 0.5vw;
+  font-size: 1vw;
   width: 32%;
   margin: 0;
 }
